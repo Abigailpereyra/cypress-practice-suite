@@ -1,0 +1,12 @@
+Comienzo del curso Cypress
+
+1. -npm  init
+
+2. -npm install cypress --save-dev --> instalación
+
+3. -npx instalación https://www.npmjs.com/package/npx
+3.1. npm install -g npx
+3.2. npx cypress install --force --> forzar la instalación
+
+4. -node_modules\.bin\cypress open --> Abrir app
+4.1. - npx cypress open --> opción 2 para abrir la app

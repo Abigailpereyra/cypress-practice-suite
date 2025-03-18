@@ -1,0 +1,8 @@
+{
+    "editor.fontLigatures": false,
+    "terminal.integrated.profiles.windows": {
+  "cmder": {
+    "path": "C:\\WINDOWS\\System32\\cmd.exe",
+    "args": ["/K", "C:\Users\agusb\Desktop\cmder\vendor\bin\\vscode_init"]
+}
+}}

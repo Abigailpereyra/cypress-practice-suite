@@ -1,0 +1,198 @@
+------- JavaScript-------
+let a="" -> declara variables
+
+Prompt = muestra en la pantalla un modal con un input
+let Prompt ("dame el valor de a: ")
+a=parseInt(a) -> Lo convierte a entero
+a=parsefloat(a) -> Ya utiliza los decimales
+
+En una linea de codigo: let a=parseFloat(Prompt("Dame el valor de a: "))
+
+function saludar(){
+    alert("Bienvenido a")
+}
+saludar() -> Llama la función creada
+
+Funcion con argumento -> fuction suma(arg1,arg2){
+    alert("entrando a la funcion suma: ")
+    let s=arg1+arg2
+    return s
+}
+let operacion_suma=suma(20,50) -> Se le pasa con los argumentos completos y se guarda en una nueva variable
+
+Arrays
+
+let frutas=["Naranja","Pera","Melón"] -> Cuando se llama: alert(fruta[0]) -> Naranja
+console.log("el numero de elementos es : "+frutas.legth) -> muestra la cantidad
+console.log("mostrar Pera: 2 +frutas[1])
+
+console.log(datos.nom) -> te muestra un dato especifico de la Array
+
+/* muestra cada elemento de la lista
+con las peticiones aclaradas en la funcion*/ -> comentario largo
+
+frutas.forEach(fuction(elemento,indice,array)){
+console.log("El elemento es: "+elemento)
+console.log("El indice es: "+indice)
+console.log("El array es: "+array)
+}
+
+let= nuevaFrutaFinal=frutas.push('Piña') -> Se agrega al array al final
+let= nuevaFrutaFinal=frutas.pop() -> Se elimina el ultimo del array
+let= nuevaFrutaPrincipio=frutas.unshift('Piña') -> Se agrega al array al principio
+let= nuevaFrutaPrincipio=frutas.shift() -> Se elimina el primero del array
+
+let buscarElemento=frutas.indexOf('Naranja')
+console.log("elemento encontrado: "+buscarElemento) -> Te trae la posición
+
+let eliminarPos=frutas.splice(buscarElemento, 1) -> elimina el elemento indicado por posicion
+pide el elemento y el numero de posicion.
+
+let frutas2=frutas.slice(); -> copia los elementos del array al nuevo array
+
+--------- Condicionales-----------
+
+*IF
+
+let a = 10
+if (a==10){                       //el == compara  l = asigna//
+    console.log("El valor es 10")
+}else{
+    console.log("El valor no es 10)
+}
+// else if(bla){bla} Si le quiero agregar otra condición.
+
+
+fuction ValidarEdad(e){
+
+if (edad <=0 || edad >=101){
+    alert("Edad no valida")
+}else if (edad > 0 && edad <13){
+    alert("Eres un niñato")
+}else{
+    alert("so re viejardi")
+}
+}
+
+let edad=parseInt(Prompt("Dame tu edad: "))
+
+ValidarEdad(edad)
+
+*SWITCH
+
+fuction CostoFruta(fruta){
+    switch(fruta){
+        case 'Naranja':
+        alert("El costo de la Naranja es de 10 pe)
+        break;
+        case 'Melón':
+        alert("El costo de la Melón es de 20 pe)
+        break;
+        case 'Sandía':
+        alert("El costo de la Sandía es de 30 pe)
+        break;
+        default:
+        alert("No tenemos la fruta "+ fruta)
+    }
+}
+
+let fruta=parseInt(Prompt("Elegi una fruta: "))
+CostoFruta(f)
+
+--------Bucles---------
+
+*FOR
+
+let x=0;
+let a=0;
+let b=0;
+let c=0;
+let num=parseInt(Prompt("dame el numero de veces que quieres que se repita: "))
+
+for(x=1;x<=num;x++) //++ incrementa de uno en uno
+{
+    console.log("El numero de repite: "+x)
+    let a=parseInt(Prompt("dame a: "))
+    let b=parseInt(Prompt("dame b: "))
+    c=a+b;
+    alert("La suma es: "+c)
+}
+
+*Dentro de una array
+
+let datos[1,2,3,4,5,5,5,3,2,5,5,2]
+Console.log("numero de elementos es: "+datos.length)-> Muestra 12
+
+for(let x=1;x<=datos.length;x++) //.lengt cuenta la cantidad de elementos dentro de la array//
+{
+    Console.log("numero de repeticiones: "+ x)
+}
+
+*FOR IN
+const object = {a: 1, b:2, c: 3, nom:'Juan'};
+
+for (let pro in object){
+    console.log(`${pro}:${object[pro]}`);
+}
+//salida:
+a:1 -> producto + objeto concatenado
+b:2
+c:3
+
+*forEach
+
+let frutas=["Naranja","Pera", "Melón"]
+Console.log(frutas.length)
+
+frutas.forEach(fuction(elemento,indice,array){
+    console.log(indice,elemento);
+})
+
+*trycatch -> Si hay error no bloquea el circuito
+
+console.log(1+3);
+
+try{
+    login() //No esta definida
+} catch (error){
+    console.log(error)
+}
+
+console.log(1+4);
+
+-----Funciones de FLecha------
+
+const saludar = () =>{
+    console.log("Hola esta es una funcion de tipo flecha")
+}
+saludar()
+
+const cuadrado = x => console.log(x*x)
+
+------Promesa------
+ let x=10;
+ console.log("## PRIMER PROCESO##");
+
+ setTimeout(()=>{   //Retarda el segundo proceso
+    x=x*3+2;
+    console.log("## PROCESO TERMINADO ## "+ x);
+ });
+
+ console.log("## TERCER PROCESO ##: "+ x)
+
+ Solucion para que siga el orden:
+
+ let x=10;
+ console.log("## PRIMER PROCESO##");
+const promesa=new Promise((resove,reject)=>{
+setTimeout(()=>{   //Retarda el segundo proceso
+    x=x*3+2;
+    console.log("## PROCESO TERMINADO ## "+ x);
+    resove(x);
+ });
+},3000)
+ 
+promesa.then(res =>{
+    console.log("## TERCER PROCESO ##: "+ x)
+})
+ 
